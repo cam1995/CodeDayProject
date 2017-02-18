@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () 
+	void Update () 
 	{
 		float MoveForward = Input.GetAxis("Vertical") * playerMoveSpeed * Time.deltaTime;
 		float MoveRotate = Input.GetAxis("Horizontal") * playerRotateSpeed * Time.deltaTime;
