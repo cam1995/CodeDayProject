@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour {
+
+	public float playerMoveSpeed = 10;
+	public float playerRotateSpeed = 10;
+
+	// Use this for initialization
+	void Start () {
+
+	}
+
+	// Update is called once per frame
+	void Update () 
+	{
+		float MoveForward = Input.GetAxis("Vertical") * playerMoveSpeed * Time.deltaTime;
+		float MoveRotate = Input.GetAxis("Horizontal") * playerRotateSpeed * Time.deltaTime;
+
+		// Move the Player
+
+		transform.Translate(Vector3.forward * MoveForward);
+		transform.Rotate(Vector3.up * MoveRotate);
+	}
+}
+	
